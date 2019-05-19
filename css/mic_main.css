@@ -420,6 +420,7 @@
 	p {
 		text-align: justify;
 		margin: 0 0 2rem 0;
+		color: #ffffff;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -545,7 +546,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #212931;
+		color: #ffffff;
 	}
 
 	blockquote {
@@ -1410,7 +1411,7 @@
 		@media screen and (max-width: 736px) {
 
 			#main > * {
-				background-color: #ffffff;
+				background-color: transparent;
 				padding: 0.5rem 1rem 0.1rem 1rem ;
 			}
 
@@ -1419,7 +1420,7 @@
 		@media screen and (max-width: 480px) {
 
 			#main {
-				background-color: #ffffff;
+				background-color: transparent;
 				width: 100%;
 			}
 		}
@@ -2267,7 +2268,7 @@
 
 			#main {
 				width: 100%;
-				background-color: #fff;
+				background-color: transparent;
 			}
 
 			.panel {
@@ -2340,6 +2341,7 @@
 					width: 100%;
 					height: 100%;
 					margin-left: 3.5em;
+					
 				}
 
 					#me header > h1 {
@@ -2349,6 +2351,7 @@
 						bottom: 52.5%;
 						font-size: 3.5rem;
 						margin: 0;
+						color: #ffffff;
 					}
 
 					#me header > p {
@@ -2358,6 +2361,7 @@
 						font-size: 1.5em;
 						letter-spacing: -0.015em;
 						margin-top: 0;
+						color: #ffffff;
 					}
 
 	}
@@ -2400,7 +2404,7 @@
 		/* Panels */
 
 			#main {
-				background: none;
+				background-color: transparent;
 				
 			}
 
