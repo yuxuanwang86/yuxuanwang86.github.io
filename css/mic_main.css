@@ -422,6 +422,7 @@
 		margin: 0 0 2rem 0;
 		color: #ffffff;
 	}
+	
 
 	h1, h2, h3, h4, h5, h6 {
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
@@ -2363,6 +2364,13 @@
 						margin-top: 0;
 						color: #ffffff;
 					}
+					#me header > span {
+						position: relative;
+						top: 72.5%;
+						font-size: 1.0em;
+						letter-spacing: -0.015em;
+						color: #ffffff;
+					}
 
 	}
 
@@ -2449,6 +2457,10 @@
 				}
 
 				#me header > p {
+					text-align: center;
+					font-size: 1.25em;
+				}
+				#me header > span {
 					text-align: center;
 					font-size: 1.25em;
 				}
@@ -4454,5 +4466,30 @@
 			padding-top: 50%;
 		}
 	}
-
+	.typed-cursor{
+		opacity: 1;
+		-webkit-animation: blink 0.7s infinite;
+		-moz-animation: blink 0.7s infinite;
+		animation: blink 0.7s infinite;
+	  }
+	  @keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	  }
+	  @-webkit-keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	  }
+	  @-moz-keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	  }
+	  .typed-fade-out{
+		  opacity: 0;
+		  animation: 0;
+		  transition: opacity .25s;
+	  }          
 
