@@ -63,82 +63,42 @@
 	
 </head>
     
-		
-<!-- Layouts -->
+		<div id="main" style="background-color: transparent; padding:0;">
+        <section class="link_container" style="margin-top: 0; background-color: transparent; ">
+            <div class="link_row">
+                <!-- 文章sample  s-->
 
-
-
-<!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_coy.css">
-<link rel="stylesheet" href="/css/typo.css">
-<!-- 文章页 -->
-<body class="is-loading">
-    <!-- Wrapper 外包 s-->
-    <div id="wrapper" class="fade-in">
-        <!-- Intro 头部显示 s -->
-        <!-- Intro 头部显示 e -->
-        <!-- Header 头部logo start -->
-        <header id="header">
-    <a href="/" class="logo">Yuxuan</a>
-</header>
-        <!-- Nav 导航条 start -->
-        <nav id="nav" class="special">
-            <ul class="menu links">
-			<!-- Homepage  主页  --> 
-			<li>
-	            <a href="/" rel="nofollow">Home</a>
-	        </li>
-			<!-- categories_name  分类   --> 
-	        
-	        <!-- archives  归档   --> 
-	        
-	        
-		        <!-- Pages 自定义   -->
-		        
-		        <li>
-		            <a href="/about/Yuxuan_Wang_EN.pdf" title="CV">
-		                CV
-		            </a>
-		        </li>
-		        
-
-
-            </ul>
-            <!-- icons 图标   -->
-			<ul class="icons">
-                    
-                    <li>
-                        <a title="github" href="https://github.com/yuxuanwang86" target="_blank" rel="noopener">
-                            <i class="icon fa fa-github"></i>
+                <% page.posts.each(function (post) { %>
+                <div class="6u 12u(narrower)">
+                    <section class="link_box special">
+                       <a href="<%- url_for(post.path) %>">
+                        <div class="page_title" style="background-image: url(<%= post.thumbnail %>);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
+                            <!--标题-->
+                            <h2 class="page_title_text"> <%= post.title %> </%=></h2>
+                            <!--段落-->
+                        </div>
                         </a>
-                    </li>
-                    
-			</ul>
-</nav>
-
-        <div id="main">
-            <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Hello world!</h2></a>
-            </div>
-            <!-- Post -->
-            <div class="typo" style="padding: 3rem;">
-                
-            </div>
-
+                        <div class="home-post-info">
+                            <!-- Author Avatar -->
+                            <div class="home-post-info-author-avatar">
+                                <h6><span class="home-post-info-data"><%- date(post.date, "yyyy-mm-dd") %></%-></span></h6>
+                                <div class="home-post-info-Category">
+                                    <!-- Category -->
+                                    <span>
+                            <h6>
+                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/">
+                                <%- list_categories(post.categories, { show_count: false, class: 'post_category', style: 'none' }) %></%-></a>
+                            </h6>
+                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- 文章sample  e-->
+            <% }) %>
+            </%></%></div>
+        </section>
         </div>
-        <!-- Copyright 版权 start -->
-                <div id="copyright">
-            <ul>
-                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
-            </ul>
-            
-				<span id="busuanzi_container_site_pv"> 2019 </span> 
-			
-        </div>
-    </div>
-</body>
-
-
-
  	
 </html>
